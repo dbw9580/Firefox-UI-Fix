@@ -12,15 +12,17 @@
     --mac-sidebar-hover-bgcolor: color-mix(in srgb, ButtonFace 60%, var(--mac-sidebar-bgcolor));
     --mac-hover-bgcolor: Window;
     --mac-disabled-bgcolor: transparent;
-    --mac-primary-button-color: -moz-accent-color-foreground; /* or -moz-mac-menutextselect */
-    --mac-accent-color: -moz-accent-color; /* or LinkText */
-    --mac-accent-content-color: color-mix(in srgb, rgb(255, 255, 255) 15%, -moz-accent-color);
-    --mac-accent-hover-color: color-mix(
-      in srgb,
-      rgb(0, 0, 0) 10%,
-      -moz-accent-color
-    ); /* or -moz-mac-menuselect, Highlight */
-    --mac-accent-active-color: color-mix(in srgb, rgb(0, 0, 0) 20%, -moz-accent-color); /* or ActiveBorder */
+    @include AccentColor {
+      --mac-primary-button-color: #{$accentTextColor}; /* or -moz-mac-menutextselect */
+      --mac-accent-color: #{$accentColor}; /* or LinkText */
+      --mac-accent-content-color: color-mix(in srgb, rgb(255, 255, 255) 15%, #{$accentColor});
+      --mac-accent-hover-color: color-mix(
+        in srgb,
+        rgb(0, 0, 0) 10%,
+        #{$accentColor}
+      ); /* or -moz-mac-menuselect, Highlight */
+      --mac-accent-active-color: color-mix(in srgb, rgb(0, 0, 0) 20%, #{$accentColor}); /* or ActiveBorder */
+    }
 
     /* Text, Icon Color */
     --menu-color: var(--mac-text-color) !important;
@@ -57,12 +59,12 @@
     --toolbar-bgcolor: var(--mac-selected-bgcolor) !important;
     --toolbar-non-lwt-bgcolor: var(--mac-selected-bgcolor) !important;
 
-    /* Field Backround Color */
+    /* Field Background Color */
     --input-bgcolor: var(--mac-field-bgcolor) !important;
     --toolbar-field-background-color: var(--mac-field-bgcolor) !important;
     --tab-icon-overlay-stroke: var(--mac-field-bgcolor) !important;
 
-    /* Panel Backround Color */
+    /* Panel Background Color */
     --arrowpanel-background: var(--mac-panel-bgcolor) !important;
 
     /* Hover Background Color  */
@@ -106,7 +108,7 @@
       --autocomplete-popup-separator-color: var(--mac-bgcolor) !important;
      */
 
-    /* Accent Color Forground */
+    /* Accent Color Foreground */
     --button-primary-color: var(--mac-primary-button-color) !important;
     --checkbox-checked-color: var(--mac-primary-button-color) !important;
 

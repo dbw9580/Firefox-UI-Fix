@@ -1,9 +1,27 @@
 /* Titlebar Space */
-.titlebar-spacer[type="pre-tabs"] {
-  width: 30px !important; /* Original: 40px */
+:root {
+  --uc-title-pre-spacer: 30px; /* Original: 40px */
+  --uc-title-post-spacer: 25px; /* Original: 40px */
+  &:-moz-locale-dir(rtl) {
+    --uc-title-pre-spacer: 25px;
+    --uc-title-post-spacer: 30px;
+  }
 }
-.titlebar-spacer[type="post-tabs"] {
-  width: 25px !important; /* Original: 40px */
+@include WindowControl_Left {
+  .titlebar-spacer[type="pre-tabs"] {
+    width: var(--uc-title-pre-spacer) !important;
+  }
+  .titlebar-spacer[type="post-tabs"] {
+    width: var(--uc-title-post-spacer) !important;
+  }
+}
+@include WindowControl_Right {
+  .titlebar-spacer[type="pre-tabs"] {
+    width: var(--uc-title-post-spacer) !important;
+  }
+  .titlebar-spacer[type="post-tabs"] {
+    width: var(--uc-title-pre-spacer) !important;
+  }
 }
 
 /* Tabbar Buttons */
@@ -55,14 +73,15 @@
 }
 
 /* Tab - Max Size */
-@include NotOption("userChrome.tab.photon_like_padding") {
-  :root {
+:root {
+  @include NotOption("userChrome.tab.photon_like_padding") {
     --tab-max-width: 240px;
   }
-}
-@include Option("userChrome.tab.photon_like_padding") {
-  :root {
+  @include Option("userChrome.tab.photon_like_padding") {
     --tab-max-width: 225px;
+  }
+  @include OneLiner {
+    --tab-max-width: 180px;
   }
 }
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
@@ -76,8 +95,8 @@
       padding-inline: 1px !important;
     }
   }
-  .tabbrowser-tab:not([last-visible-tab]) {
-    margin-inline-end: -0.5px !important;
+  #TabsToolbar:not([multibar]) .tabbrowser-tab:not([last-visible-tab]) {
+    margin-inline-end: -1px !important;
   }
 }
 @include Option("userChrome.tab.photon_like_padding") {

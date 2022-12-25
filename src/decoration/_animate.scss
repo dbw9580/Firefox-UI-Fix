@@ -40,9 +40,7 @@
         margin-inline-start 0.2s var(--animation-easing-function), min-width 0.1s ease-out, max-width 0.1s ease-out !important;
     }
     &[pinned] {
-      transition: -moz-box-flex 0.2s var(--animation-easing-function),
-        margin-inline-start 0.2s var(--animation-easing-function) !important;
-
+      transition: margin-inline-start 0.2s var(--animation-easing-function), min-width 0.1s ease-out, max-width 0.1s ease-out !important;
     }
   }
 
@@ -104,6 +102,7 @@ xul|search-textbox.tabsFilter,
     /* Animation */
     transition: margin-inline-start 0.25s var(--animation-easing-function), opacity 0.25s ease-in-out,
       visibility 0s linear !important;
+    will-change: margin-inline-start, opacity, visibility;
 
     &[hidden="true"] {
       display: -moz-box !important;
@@ -143,7 +142,7 @@ xul|search-textbox.tabsFilter,
   from {
     margin-top: 0;
   }
-  /* Dont' use `to`: Depending on density */
+  /* Don't use `to`: Depending on density */
 }
 
 /*- Expand - Synced Tabs ---------------------------------------------------*/
