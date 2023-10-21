@@ -7,6 +7,9 @@
 ----------
     Major Contributors
 
+N: 2641a40fd44383320adde4b027a1d0b03bd550
+W: https://github.com/2641a40fd44383320adde4b027a1d0b03bd550
+
 N: AveYo
 E: aveyo@yahoo.com
 W: https://github.com/AveYo
@@ -22,9 +25,16 @@ W: https://ethansup.net
 ----------
     Sponsors
 
+N: Alessandro Rubino
+W: https://github.com/Babbiorsetto
+
 N: Jani Haiko
 E: haiko.jani@gmail.com
 W: https://github.com/ojaha065
+
+N: Jiho Lee
+E: optional.int@kakao.com
+W: https://github.com/DPS0340
 
 N: kanlukasz
 W: https://github.com/kanlukasz
@@ -36,11 +46,11 @@ W: https://github.com/nikkehtine
 N: OSS.kr
 W: https://www.oss.kr/
 
+N: ZachKnife1
+W: https://github.com/ZachKnife1
+
 ----------
     Contributors
-
-N: 2641a40fd44383320adde4b027a1d0b03bd550
-W: https://github.com/2641a40fd44383320adde4b027a1d0b03bd550
 
 N: 7k5x
 E: 7k5xlp0onfire@gmail.com
@@ -52,6 +62,9 @@ W: https://github.com/Ajith-stark
 
 N: akay
 W: https://github.com/akay
+
+N: Alex Kontos
+W: https://github.com/MrAlex94
 
 N: Andmagdo
 W: https://github.com/andmagdo
@@ -76,6 +89,10 @@ N: dr460nf1r3
 E: njcrypted@protonmail.com
 W: https://dr460nf1r3.me/
 
+N: Dusk Banks
+E: me@bb010g.com
+W: https://static.bb010g.com/
+
 N: Filip Š
 E: filip.stamcar@hotmail.com
 W: https://www.filips.si/
@@ -97,8 +114,19 @@ W: https://www.mamen.at
 N: MarNicGit
 W: https://github.com/MarNicGit
 
+N: menndouyukkuri
+E: menndoukusagari@gmail.com
+W: https://github.com/menndouyukkuri
+
+N: Mizuki
+W: https://github.com/MagicalDrizzle
+
 N: Oondanomala
 W: https://github.com/Oondanomala
+
+N: Patricek
+E: pk22.games@gmail.com
+W: https://github.com/Patricek0056
 
 N: ph3b3
 E: phoebeleong8@gmail.com
@@ -156,6 +184,11 @@ W: https://gist.github.com/mmis1000/08d8de4bbe70c04423f0b966bcc286b1
 C: Copyright (c) 2021 Mmis1000 <mmis10002@gmail.com>
 L: MIT
 
+N: edge-frfox
+W: https://github.com/bmFtZQ/edge-frfox
+C: Copyright (c) 2021 bmFtZQ
+L: MIT
+
 N: Feather
 W: https://github.com/feathericons/feather
 C: Copyright (c) 2013-2017 Cole Bemis
@@ -165,6 +198,11 @@ N: firefox-csshacks
 W: https://github.com/MrOtherGuy/firefox-csshacks
 C: Copyright (c) 2018 MrOtherGuy
 L: MPL 2.0
+
+N: Firefox Custom CSS
+W: https://github.com/hakan-demirli/Firefox_Custom_CSS
+C: Copyright (c) 2022 hakan-demirli
+L: MIT
 
 N: Fluent UI System Icons
 W: https://github.com/microsoft/fluentui-system-icons
@@ -180,6 +218,11 @@ N: MaterialFox
 W: https://github.com/muckSponge/MaterialFox
 C: Copyright (c) 2018 muckSponge
 L: MIT
+
+N: Mozilla Foundation
+W: https://mozilla.org
+C: Copyright (c) 1998–2023 The Mozilla Foundation
+L: Creative Commons Attribution Share-Alike 3.0 Unported
 
 N: Multi-Account-Containers
 W: https://github.com/mozilla/multi-account-containers
@@ -246,3 +289,8 @@ N: Waterfox
 W: https://github.com/WaterfoxCo/Waterfox
 C: Copyright (c) 2012 Waterfox Limited
 L: MPL 2.0
+
+N: WaveFox
+W: https://github.com/QNetITQ/WaveFox
+C: Copyright (c) 2021 QNetITQ
+L: MIT

@@ -22,6 +22,11 @@
   --menuitem-image: url("chrome://global/skin/icons/blocked.svg");
 }
 
+menuitem[data-l10n-id="popup-show-popup-menuitem"] {
+  /* checkbox */
+  --menuitem-image: url("../icons/eye-show.svg");
+}
+
 /*= autohide-context =========================================================*/
 #autohide-context > menuitem[data-l10n-id="full-screen-autohide"] {
   /* checkbox */
@@ -42,7 +47,7 @@
   &.manageExtensionItem {
     --menuitem-image: url("chrome://global/skin/icons/settings.svg");
   }
-  .removeExtensionItem {
+  &.removeExtensionItem {
     --menuitem-image: url("chrome://global/skin/icons/delete.svg");
   }
 }
@@ -227,6 +232,10 @@ menuitem.searchbar-clear-history {
 }
 
 /*= unified-extensions-context-menu ==========================================*/
+.unified-extensions-context-menu-pin-to-toolbar {
+  --menuitem-image: url("../icons/pin-tab.svg");
+}
+
 .unified-extensions-context-menu-manage-extension {
   --menuitem-image: url("chrome://global/skin/icons/settings.svg");
 }
@@ -235,4 +244,14 @@ menuitem.searchbar-clear-history {
 }
 .unified-extensions-context-menu-report-extension {
   --menuitem-image: url("../icons/send.svg");
+}
+
+/*= urlbarView-result-menu ===================================================*/
+.urlbarView-result-menuitem {
+  &[data-command="dismiss"] {
+    --menuitem-image: url("chrome://global/skin/icons/delete.svg");
+  }
+  &[data-command="help"] {
+    --menuitem-image: url("chrome://global/skin/icons/info.svg");
+  }
 }

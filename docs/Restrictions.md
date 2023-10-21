@@ -10,6 +10,7 @@
   * [`-moz-accent-color`](#-moz-accent-color)
   * [Fork Browsers](#fork-browsers)
   * [Add-ons](#add-ons)
+  * [SCSS](#scss)
 - [Internals](#internals)
   * [CSS Loading Order](#css-loading-order)
   * [DOM structure cannot be modified](#dom-structure-cannot-be-modified)
@@ -39,6 +40,8 @@ Complex UI emulation is quite tricky. [[Linux's Proton UI Library Chrome](https:
 
 [Bookmark menu](https://github.com/black7375/Firefox-UI-Fix/issues/136) is also similar example([code](https://github.com/black7375/Firefox-UI-Fix/blob/36e9c94844fee2417662251cbd50c2b874d5b576/userChrome.css#L4745-L4840)).
 
+In the case of the Mac native menu, there may be a menu that [cannot be displayed icon or added at the OS level](https://github.com/black7375/Firefox-UI-Fix/issues/699).
+
 ### Firefox Version
 There may be changes that change by version of Firefox.
 
@@ -61,6 +64,9 @@ This project is using SCSS to make a [reusable compatible mixins](../src/utils).
 - `:root[lwtheme-mozlightdark]` is removed [#288](https://github.com/black7375/Firefox-UI-Fix/issues/288)
 - `-moz-os-version` -> `-moz-platform` [#331](https://github.com/black7375/Firefox-UI-Fix/issues/331)
 - Breaking change with `-moz-accent-color`/`-moz-accent-color-foreground` -> `AccentColor`/`AccentColorText` [#433](https://github.com/black7375/Firefox-UI-Fix/issues/433)
+- `-moz-box` to `flex` layout [#670](https://github.com/black7375/Firefox-UI-Fix/issues/670)
+- Drop `windows7` and `windows8`[#744](https://github.com/black7375/Firefox-UI-Fix/issues/744)
+  - `-moz-platform: windows-win7`, `-moz-platform: windows-win8`, `-moz-platform: windows-win10`, `-moz-windows-non-native-menus`
 
 ### Side Effect
 Only CSS modifications can cause bugs that are hard to think of in the general web, such as the [context menu not appearing](https://github.com/black7375/Firefox-UI-Fix/issues/114).  
@@ -97,6 +103,7 @@ Fork browsers have a different installation location ([bash](https://github.com/
 
 List of fork browsers supported by this project:
 - [Waterfox](https://www.waterfox.net/)
+- [Floorp](https://floorp.app/)
 - [LibreWolf](https://librewolf.net/)
 - [Tor Browser](https://www.torproject.org/download/)
 - [Pulse Browser](https://pulsebrowser.app/)
@@ -125,6 +132,14 @@ Legacy addons can be loaded by [Auto config's feature](./Preference.md#auto-conf
 
 List of legacy addons supported by this project:
 - [Tab Mix Plus](https://github.com/onemen/TabMixPlus)
+
+### SCSS
+
+Due to [various compatibility](#firefox-version) and [option dependency](https://github.com/black7375/Firefox-UI-Fix/wiki/Options) requirements, we are using a CSS preprocessor, [SCSS](https://sass-lang.com/).
+
+[`-moz-document`](https://developer.mozilla.org/en-US/docs/Web/CSS/@document) has been [deprecated in SCSS](https://sass-lang.com/documentation/breaking-changes/moz-document), and displays a lot of warnings.
+
+Unlike normal cases, this project works because it is [at the UA sheet level](https://bugzilla.mozilla.org/show_bug.cgi?id=1035091), and we have to [hide warnings](https://github.com/black7375/Firefox-UI-Fix/commit/300d3d9c77108520c3757a8898819d8af6a00c62) to show other critical errors.
 
 ## Internals
 ### CSS Loading Order
